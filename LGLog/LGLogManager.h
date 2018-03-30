@@ -26,14 +26,14 @@ typedef NS_ENUM(NSInteger, LGLogFrequency) {
 
 @interface LGLogManager : NSObject
 + (instancetype)shareInstence;
-/** 开启日志文件系统, 默认日志文件同步频率为1周 */
+/** 开启日志文件系统, 默认日志文件刷新频率为1周 */
 - (void)startFileLogSystem;
 
 /**
  以指定日志文件保存路径开启日志文件系统
 
  @param direct 日志文件保存路径
- @param freshLogFrequency 日志同步频率
+ @param freshLogFrequency 日志刷新频率
  */
 - (void)startFileLogSystemWithDirectory:(NSString *)direct
                       freshLogFrequency:(LGLogFrequency) freshLogFrequency;

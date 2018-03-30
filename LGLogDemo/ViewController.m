@@ -17,20 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LGLogError(@"错了");
-    LGLogWarn(@"警告了");
-    LGLogInfo([[LGLogManager shareInstence].getLogPath firstObject]);
-    LGLogInfo([LGLogManager shareInstence].getCurrentLogPath);
-    // Do any additional setup after loading the view, typically from a nib.
+    LGLogError(@"错误信息");
+    LGLogWarn(@"警告信息");
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-     LGLogDebug(@"警告了");
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 @end
