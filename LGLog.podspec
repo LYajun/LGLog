@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LGLog"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "基于CocoaLumberjack的日志管理工具"
 
   # 项目主页地址

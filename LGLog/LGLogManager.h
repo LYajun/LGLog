@@ -10,7 +10,7 @@
 #import "LGLogFormatter.h"
 
 #if DEBUG
-static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+static const DDLogLevel ddLogLevel = DDLogLevelAll;
 #else
 static const DDLogLevel ddLogLevel = DDLogLevelError;
 #endif

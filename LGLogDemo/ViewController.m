@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LGLogError(@"错误信息");
+    NSString *str = @"错误信息";
+    LGLogError(str);
     LGLogWarn(@"警告信息");
 }
 @end
