@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LGLog"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "基于CocoaLumberjack的日志管理工具"
 
   # 项目主页地址
@@ -24,13 +24,21 @@ Pod::Spec.new do |s|
   }
 
   # 需要包含的源文件
-  s.source_files  = "LGLog/*.{h,m}"
+  s.source_files  = "LGLog/LGLog.h"
   
+
+  s.subspec "YJCocoaLumberjack" do |cocoaLumberjack|
+    cocoaLumberjack.source_files =  "LGLog/YJCocoaLumberjack/**/*.{h,m}"
+  end
+
+  s.subspec "LGLogManager" do |logManager|
+    logManager.source_files =  "LGLog/LGLogManager/**/*.{h,m}"
+    logManager.dependency "LGLog/YJCocoaLumberjack"
+  end
+
 
   # 是否支持ARC 
   s.requires_arc = true
 
-  # 依赖的开源库
-  s.dependency 'CocoaLumberjack'
 
 end
